@@ -1,0 +1,199 @@
+/*CORPO DO PROJETO PADRÃO*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/*BACKGROUND COM IMAGEM E PLAY*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /*FAZ A IMAGEM COBRIR O ESPAÇO DISPONIVEL*/
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*LOGO ACIMA DO PLAY*/
+.overlay .logo{
+    width: 300px;
+    height: 145px;
+}
+
+/*LINK DO BUTTON PLAY*/
+.overlay a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/*BOTÃO PLAY*/
+.overlay button {
+    font-size: 24px;
+    padding: 15px 30px;
+    border: 1px solid #0253a4;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #0253a4;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*TEXTO AKIRA TORIYAMA*/
+.rest_peace {
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #0b4681
+}
+
+/*ASSINATURA DE AUTOR*/
+.footer {
+    font-size: 9px;
+    text-align: center;
+    color: #0b4681;
+    margin-top: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*LOGO DO AUTOR*/
+.footer img{
+    width: 15px;
+    height: 12px;
+}
+
+/*TELA DO GAME*/
+.game-board {
+    width:1280x;
+    height: 500px;
+    margin: 0 auto;
+    border: 3.5px solid #0ca4d6;
+    position: relative;
+    overflow: hidden;
+}
+
+/*BACKGROUND DA CASA DO KAME*/
+.kame_house {
+    position: absolute;
+    width: 100%;
+    height: 570px;
+}
+
+/*OBSTACULO QUE O GOKU PULA*/
+.obstaculo{
+    position: absolute;
+    bottom: 0;
+    top: 65%;
+    width: 205px;
+    height: 270px;
+    animation: obstaculo-animation 2s infinite linear;/*VELOCIDADE DO OBSTACULO*/
+}
+
+/*GOKU ENCIMA DA NUVEM*/
+.goku {
+    width:140px;
+    position: absolute;
+    bottom: 0;
+}
+
+/*PULO DO GOKU*/
+.jump {
+    animation: jump 600ms ease-out;/*VELOCIDADE DO PULO*/
+}
+
+/*NUVEM*/
+.cloud1  {
+    position: absolute;
+    width: 300px;
+    animation: clouds-animation 3s infinite linear;/*VELOCIDADE QUE AS NUVEM PASSAM*/
+}
+
+.cloud2 {
+    position: absolute;
+    width: 300px;
+    animation: clouds-animation 2.8s infinite linear;
+}
+
+.cloud3{
+    position: absolute;
+    width: 350px;
+    animation: clouds-animation 3.4s infinite linear;
+}
+
+/*NUVEM ROSA*/
+.rose{
+    position: absolute;
+    width: 300px;
+    animation: clouds-animation 2.7s infinite linear;
+}
+
+.rose2{
+    position: absolute;
+    width: 250px;
+    animation: clouds-animation 3.2s infinite linear;
+}
+
+
+
+.rose3{
+    position: absolute;
+    width: 310px;
+    animation: clouds-animation 2.4s infinite linear;
+}
+
+/*BULMA VOANDO NO LADO ESQUERDO ACIMA DO GOKU*/
+.bulma {
+    position: absolute;
+    right: 83.5%;
+    width: 31%;
+}
+
+
+/*ANIMAÇÃO DO OBSTÁCULO*/
+@keyframes obstaculo-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+/*ANIMAÇÃO DO PULO DO GOKU*/
+@keyframes jump {
+
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom:180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+
+/*ANIMAÇÃO DAS NUVENS PASSANDO NO*/
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
